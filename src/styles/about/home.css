@@ -1,0 +1,97 @@
+.home {
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    background: radial-gradient(#353535, #151515);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.runelite-link {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.runelite-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -2px;
+    background-color: #9EB25D;
+}
+
+
+.runelite-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -2px;
+    background-color: darkslateblue;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.runelite-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.home-img {
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 55vh;
+}
+
+.home-img-content {
+    max-width: min(95vw, 95vh);
+
+
+    cursor: url("../../../public/images/dragon-scimitar.png"), auto;
+}
+
+
+/**
+
+475px = height
+
+TODO - resize if screen height < content
+
+**/
+
+/* @media (max-height:750px) {
+    .home-img-content{
+        width: 75vw;
+    }
+}
+
+@media (max-height:500px) {
+    .home-img-content{
+        width: 50vw;
+    }
+}
+
+@media (max-height:350px) {
+    .home-img-content{
+        width: 35vw;
+    }
+} */

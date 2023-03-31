@@ -1,0 +1,248 @@
+.nav-bar {
+    position: relative;
+    z-index: 999;
+    background-color: #252525;
+    border: 4px solid darkslateblue;
+    box-shadow: 5px 10px 15px black, inset 0 0 5px #505050;
+
+    position: absolute;
+    left: -1vw;
+    top: 87.5vh;
+
+    width: 110vw;
+    height: 7.5vh;
+    min-height: 50px;
+
+    text-align: center;
+    display: block;
+    user-select: none;
+}
+
+.nav-logo {
+    vertical-align: top;
+    transition: all 1s linear;
+}
+
+.nav-logo.sticky {
+    width: 49px;
+    height: 48px;
+
+    transition: all 1s linear;
+}
+
+.nav-bar.sticky {
+    position: fixed;
+    z-index: 999;
+    top: 0vh;
+
+    left: -1vw;
+    width: 110vw;
+    height: 7.5vh;
+}
+
+.nav-content {
+    width: 85%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+}
+
+.nav-login {
+    letter-spacing: 1.5px;
+    cursor: pointer;
+
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link {
+    letter-spacing: 1.5px;
+    font-size: clamp(12px, 1.5vw, 24px);
+
+    cursor: pointer;
+
+    display: inline-block;
+    position: relative;
+    transition: transform .15s ease-in-out;
+}
+
+.nav-link.selected {
+    color: #858585;
+    text-decoration: underline;
+    text-decoration-color: darkslateblue;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -2px;
+    background-color: #9EB25D;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover,
+.nav-link.hovered {
+    transform: scale(1.1);
+}
+
+.nav-link:hover::after,
+.nav-link.hovered::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.nav-discord {
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    left: 10px;
+
+    height: auto;
+    width: auto;
+
+    min-height: 15px;
+    max-width: 12vw;
+    max-height: 28px;
+
+}
+
+
+/* Image */
+.nav-discord.hovered {
+    filter: drop-shadow(0px 0px 1px #9EB25D);
+}
+
+.nav-login:hover {
+    text-decoration: underline;
+    text-decoration-color: #9EB25D;
+    text-underline-offset: 4px;
+}
+
+/* Side-Nav */
+.side-nav {
+    user-select: none;
+    width: 35vw;
+    height: 100%;
+}
+
+.side-content {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    border: 1px solid darkslateblue;
+}
+
+.user-info {
+    height: 30vh;
+    font-size: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: darkslateblue;
+
+    border: 1px solid darkslateblue;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: inset 0 0 5px black;
+
+}
+
+.user-greeting {
+    color: #9EB25D;
+}
+
+.user-avatar {
+    width: 128px;
+    height: 128px;
+
+    vertical-align: top;
+    box-shadow: inset 0 0 5px black;
+    background-color: #151515;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0px;
+}
+.side-logo {
+    width: 25%;
+}
+
+
+
+@media(max-height:800px) {
+    .user-avatar {
+        width: 64px;
+        height: 64px;
+    }
+
+    .side-logo{
+        width: 15%;
+    }
+}
+
+@media(max-height:600px) {
+    .user-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .user-name {
+        font-size: 12px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    .nav-link{
+        font-size: 12px;
+    }
+
+    .side-logo{
+        width: 10%;
+    }
+}
+
+@media(max-height:400px) {
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+        margin: 0px;
+    }
+
+    .user-name {
+        margin: 2px;
+    }
+
+    .material-symbols-outlined{
+        font-size: 15px;
+    }
+    .nav-logout {
+        font-size: 10px;
+    }
+
+
+}

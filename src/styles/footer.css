@@ -1,0 +1,27 @@
+.footer {
+    user-select: none;
+
+    height: 100%;
+    background-color: darkslateblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tm-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #9EB25D;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}
+
+.disclaimer{
+    font-size: max(.1vw, 12px);
+    letter-spacing: 0.4px;
+}
+

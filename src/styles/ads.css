@@ -1,0 +1,16 @@
+/* .adsterra-banner */
+iframe {
+    padding: 2px;
+    border: 2px solid #353535;
+    border-radius: 10px;
+}
+
+.amazon-ad {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 25px;
+}

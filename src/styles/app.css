@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+:root {
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
+}
+
+/* Scroll-bars*/
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #757575;
+  border-left: 1px solid rgb(112, 110, 110);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #505050;
+  border-radius: 20px;
+  border: 2px solid #252525;
+}
+
+/* Desktop/Laptop */
+@media screen {
+  :root {
+    background-color: #151515;
+  }
+}

@@ -1,0 +1,125 @@
+.slide-right {
+    right: 0vw;
+    position: relative;
+    transition: right 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.slide-right.start {
+    right: 100vw;
+}
+
+.slide-down {
+    top: 0vw;
+    position: relative;
+    transition: top 1s ease-in-out;
+}
+
+.slide-down.start {
+    top: -10vw;
+}
+
+
+.slide-up {
+    letter-spacing: 2px;
+    visibility: visible;
+    font-size: default;
+
+    bottom: 0vh;
+    position: relative;
+    transition: all 1s linear;
+
+    transition-delay: 2.5s;
+}
+
+.slide-up.start {
+    visibility: hidden;
+    letter-spacing: 0px;
+    bottom: -15vh;
+    font-size: 0vh;
+}
+
+
+.push-up {
+    margin-top: 0vh;
+    transition: all 2s linear;
+    transition-delay: 1s;
+}
+
+.push-up.start {
+    margin-top: 100vh;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: scale(1.0);
+    transition: all 1s linear;
+    transition-delay: 1s;
+}
+
+.fade-in.start {
+    opacity: 0;
+    transform: scale(0.0);
+
+}
+
+.grow-out {
+    transform: scale(1.0);
+    transition: transform 1s ease-in-out;
+    transition-delay: 1.5s;
+}
+
+.grow-out.start {
+    transform: scale(0.0);
+}
+
+
+:root {
+    /* --gold: #9EB25D;
+    --light-shadow: #a7b96d;
+    --dark-shadow: #8ea053; */
+    --gold: darkslateblue;
+    --light-shadow: #40367d;
+    --dark-shadow: #5a5096;
+}
+
+/*
+    (MODIFIED) Text Effect by Taj Shireen
+    https://codepen.io/TajShireen/pen/LYyOzJL
+*/
+
+.threed-txt {
+    display: grid;
+    margin-top: -1vh;
+}
+
+.threed-txt>div {
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: 900;
+    grid-area: overlap;
+    -webkit-text-stroke: 4px transparent;
+}
+
+/* Text outline */
+div.bg {
+    background-image: repeating-linear-gradient(105deg,
+            var(--gold) 0%,
+            var(--dark-shadow) 5%,
+            var(--gold) 12%);
+    color: transparent;
+    filter: drop-shadow(5px 5px 5px #252525);
+    transform: scaleY(1.03) scaleX(1.02);
+    transform-origin: top;
+}
+
+div.fg {
+    background-image: repeating-linear-gradient(5deg,
+            var(--gold) 0%,
+            var(--light-shadow) 23%,
+            var(--gold) 31%);
+    color: #252525;
+
+    transform: scale(1);
+}

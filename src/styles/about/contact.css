@@ -1,0 +1,160 @@
+.contact {
+    height: 75vh;
+    width: 100%;
+    background: radial-gradient(#353535, #151515);
+
+    display: flex;
+    flex-direction: column;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+}
+
+
+.email {
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vh;
+}
+
+.email-holder{
+    width: 100%;
+    text-align: center;
+}
+
+.email-title{
+    display: inline-block;
+    text-align: left;
+    min-width: 75px;
+    max-width: 150px;
+}
+
+.contact-email {
+    background-color: #757575;
+    font-size: max(20px, 2.5vw);
+    position: relative;
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.contact-email::before {
+    content: attr(data-txt);
+    background-color: darkslateblue;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 0%;
+    transition: all 1s ease;
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.contact-email:hover::before {
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact-email.copied {
+    color: darkslateblue;
+}
+
+.discord {
+    margin: 5vh;
+
+    width: 80vw;
+    height: 50vh;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+}
+
+.discord-holder {
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    border: 1px solid #353535;
+    border-radius: 5px;
+}
+
+.discord-divider {
+    color: #454545;
+    font-size: 4vh;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.discord-chat {
+    width: 100%;
+    height: 100%;
+}
+
+.discord-info {
+    user-select: none;
+
+    height: 100%;
+    width: 100%;
+
+    font-size: 3vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #9EB25D;
+}
+
+.discord-info-img {
+    position: relative;
+    top: 1vh;
+    left: 1vh;
+
+    height: 3vh;
+    width: 15vh;
+
+}
+
+button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2vh;
+    letter-spacing: 1px;
+    width: 50%;
+    height: 10vh;
+
+    border-radius: 5px;
+    border: 1px solid #505050;
+    background: darkslateblue;
+    color: #9EB25D;
+    font-weight: 800;
+
+    transform: scale(1.0);
+    transition: transform 0.25s linear;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media (max-height:600px){
+    .contact-email{
+        font-size: 1rem
+    }
+}
